@@ -1,6 +1,8 @@
 require "sinatra"
 require "sinatra/reloader"
 require "httparty"
+url="https://api.openweathermap.org/data/2.5/onecall?lat=42.0574063&lon=-87.6722787&units=imperial&appid=e382174450741203b5f19184518326e5"
+forecast=httparty.get(url).parsed_response.to_hash
 def view(template); erb template.to_sym; end
 
 get "/" do
