@@ -1,24 +1,23 @@
 require "sinatra"
 require "sinatra/reloader"
 require "httparty"
-url="https://api.openweathermap.org/data/2.5/onecall?lat=42.0574063&lon=-87.6722787&units=imperial&appid=e382174450741203b5f19184518326e5"
-forecast=httparty.get(url).parsed_response.to_hash
+
 def view(template); erb template.to_sym; end
 
 get "/" do
-  ### Get the weather
-  # Evanston, Kellogg Global Hub... replace with a different location if you want
   lat = 42.0574063
   long = -87.6722787
 
-  units = "imperial" # or metric, whatever you like
-  key = "YOUR-API-KEY-GOES-HERE" # replace this with your real OpenWeather API key
+  units = "imperial" # or metric
+  weather_key = "e382174450741203b5f19184518326e5" 
 
-  # construct the URL to get the API data (https://openweathermap.org/api/one-call-api)
-  url = "https://api.openweathermap.org/data/2.5/onecall?lat=#{lat}&lon=#{long}&units=#{units}&appid=#{key}"
-
-  # make the call
+  url = "https://api.openweathermap.org/data/2.5/onecall?lat=#{lat}&lon=#{long}&units=#{units}&appid=#{weather_key}"
   @forecast = HTTParty.get(url).parsed_response.to_hash
 
   ### Get the news
+  news_key = "506191c9c05f4e31baf54ff587752cee"
+  url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=#{news_key}"
+  @news = HTTParty.get(url).parsed_response.to_hash
+
+
 end
