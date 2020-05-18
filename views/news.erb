@@ -36,9 +36,10 @@
 <!--News-->
     <div class="container mt-5">
       <h1>News</h1>
-      <p>Here are the top news headlines from the US:</p>
+      <h3>Here are the top news headlines from the US:</h3>
       <% for story in @news_to_disp %>
         <p> <%= story["title"] %> </p>
+        <p> <a href="<%= story["url"] %>" class="btn">Go to article</a>
       <% end %>
 
     </div>
