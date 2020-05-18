@@ -24,10 +24,19 @@
 
     <div class="container mt-5">
       <h1>Local Weather</h1>
+        <p>It is currently <%= @forecast["current"]["temp"]%> degress and <%= @forecast["current"]["weather"][0]["description"]%> at the Kellogg Global Hub</p>
+      <h3>Extended Forecast</h3>
+        <% for day in @forecast["daily"] %>
+            <p>On Day <%= @day_number %>, it will be <%= day["temp"]["day"] %> degress and <%= day["weather"][0]["description"] %></p>
+            <% @day_number= @day_number+1 %>
+        <% end %>     
     </div>
 
     <div class="container mt-5">
       <h1>News</h1>
+       <p> 
+        Here are the top news headlines from the US:
+       </p>
     </div>
 
     <!-- Optional JavaScript -->
