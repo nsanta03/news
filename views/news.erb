@@ -22,6 +22,7 @@
   </head>
   <body>
 
+<!--Weather Report-->
     <div class="container mt-5">
       <h1>Local Weather</h1>
         <p>It is currently <%= @forecast["current"]["temp"]%> degress and <%= @forecast["current"]["weather"][0]["description"]%> at the Kellogg Global Hub</p>
@@ -32,11 +33,14 @@
         <% end %>     
     </div>
 
+<!--News-->
     <div class="container mt-5">
       <h1>News</h1>
-       <p> 
-        Here are the top news headlines from the US:
-       </p>
+      <p>Here are the top news headlines from the US:</p>
+      <% for story in @news_to_disp %>
+        <p> <%= story["title"] %> </p>
+      <% end %>
+
     </div>
 
     <!-- Optional JavaScript -->
