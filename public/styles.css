@@ -13,13 +13,14 @@ h1 {color: purple;
 .display-4 {color:whitesmoke;
     font-size: 60px;
     font-weight: bold;
+    font-family: Spartan;
 }
 
 .lead {color: whitesmoke;
     font-size: 20px;
     font-weight: bold;
+    font-family: Spartan;
 }
 
-h4 {
-
+h5 { font-family: Merriweather;
 }
