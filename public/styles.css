@@ -1,8 +1,10 @@
 h1 {color: purple;
+    margin-bottom: 25px;
 }
 
 .btn {background-color: purple;
-    color:white;
+    color:whitesmoke;
+    margin-bottom: 50px;
 }
 
 .jumbotron {background-image: url(hub.jpg);
@@ -22,5 +24,5 @@ h1 {color: purple;
     font-family: Spartan;
 }
 
-h5 { font-family: Merriweather;
+h5 {font-family: Merriweather;
 }
