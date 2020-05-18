@@ -38,9 +38,9 @@
       <h1>News</h1>
       <h3>Here are the top news headlines from the US:</h3>
       <% for story in @news_to_disp %>
-        <p> <img src= "<%= story["urlToImage"] %>" class="d-block w-50"></p>
+        <p> <img src= "<%= story["urlToImage"] %>" class="d-block w-50"> </p>
         <p> <%= story["title"] %> </p>
-        <p> <a href="<%= story["url"] %>" class="btn">Go to article</a>
+        <p> <a href="<%= story["url"] %>" class="btn">Go to article</a> </p>
       <% end %>
 
     </div>
