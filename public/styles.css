@@ -4,3 +4,22 @@ h1 {color: purple;
 .btn {background-color: purple;
     color:white;
 }
+
+.jumbotron {background-image: url(hub.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.display-4 {color:whitesmoke;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.lead {color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h4 {
+
+}

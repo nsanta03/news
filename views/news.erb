@@ -21,7 +21,13 @@
     <title>News & Weather</title>
   </head>
   <body>
-
+    
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Welcome to Nick's Kellogg News Page</h1>
+            <p class="lead">Get the latest local weather and news headlines here.</p>
+        </div>
+    </div>
 <!--Weather Report-->
     <div class="container mt-5">
       <h1>Local Weather</h1>
@@ -38,8 +44,10 @@
       <h1>News</h1>
       <h3>Here are the top news headlines from the US:</h3>
       <% for story in @news_to_disp %>
+        <h5> <%= story["title"] %> </h5>
         <p> <img src= "<%= story["urlToImage"] %>" class="d-block w-50"> </p>
         <p> <%= story["title"] %> </p>
+        <p> <%= story["description"] %> </p>
         <p> <a href="<%= story["url"] %>" class="btn">Go to article</a> </p>
       <% end %>
 
